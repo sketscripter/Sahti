@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="zxx" class="js">
+<head>
+	<meta charset="utf-8">
+    <meta name="author" content="Softnio">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <!-- Fav Icon  -->
+    <link rel="shortcut icon" href="images/image-removebg-preview.png">
+    <!-- Site Title  -->
+    <title>Sahti | Coronavirus (COVID-19) Prevention & Informatics HTML Template</title>
+    <!-- Bundle and Base CSS -->
+    <link rel="stylesheet" href="assets/css/bundle.css?ver=112">
+    <link rel="stylesheet" href="assets/css/styles-azure.css?ver=112">
+</head>
+
+<body class="nk-body nk-body-alt">
+    <script type="module">
+
+          fetch("https://covid-19-tracking.p.rapidapi.com/v1/world", {
+              "method": "GET",
+              "headers": {
+                "x-rapidapi-key": "8a419cf8f0mshc6058457688db76p1e5e22jsn320a49395c07",
+                "x-rapidapi-host": "covid-19-tracking.p.rapidapi.com"
+            }
+          })
+          .then(response => response.json())
+          .then(response => {
+              console.log(response);
+
+            document.getElementById('world_confirmed').innerHTML = response["Total Cases_text"];
+            document.getElementById('world_deaths').innerHTML = response["Total Deaths_text"];
+            document.getElementById('world_recovered').innerHTML = response["Total Recovered_text"];
+          })
+          .catch(err => {
+            console.log(err);
+          });
+
+          fetch("https://covid-19-tracking.p.rapidapi.com/v1/morocco", {
+              "method": "GET",
+              "headers": {
+                "x-rapidapi-key": "8a419cf8f0mshc6058457688db76p1e5e22jsn320a49395c07",
+                "x-rapidapi-host": "covid-19-tracking.p.rapidapi.com"
+            }
+          })
+          .then(response => response.json())
+          .then(response => {
+              console.log(response);
+
+            document.getElementById('morocco_confirmed').innerHTML = response["Total Cases_text"];
+            document.getElementById('morocco_deaths').innerHTML = response["Total Deaths_text"];
+            document.getElementById('morocco_recovered').innerHTML = response["Total Recovered_text"];
+          })
+          .catch(err => {
+            console.log(err);
+          });
+    </script>
+    <div class="nk-wrap">
+        <header class="nk-header bg-light-grad-a has-overlay" id="home">
+            <div class="overlay shape shape-line-a"></div><!-- Overlay Shape -->
+            <div class="nk-navbar is-light is-sticky" id="navbar">
+                <div class="container">
+                    <div class="nk-navbar-wrap">
+                        <div class="nk-navbar-logo logo">
+                            <a href="./" class="logo-link">
+                                <img class="logo-dark" src="images/logo-dark.png" srcset="images/logo-dark2x.png 2x" alt="logo">
+                                <img class="logo-light" src="images/logo-white.png" srcset="images/logo-white2x.png 2x" alt="logo">
+                            </a>
+                        </div><!-- .nk-navbar-logo -->
+                        <div class="nk-navbar-toggle d-lg-none">
+                            <a href="#" class="toggle" data-menu-toggle="navbar-menu"><em class="icon-menu icon ni ni-menu"></em><em class="icon-close icon ni ni-cross"></em></a>
+                        </div><!-- .nk-navbar-toggle -->
+                        <nav class="nk-navbar-menu nk-navbar-menu-between" id="navbar-menu">
+                            <ul class="nk-menu">
+                                <li class="nk-menu-item"><a class="scrollto nav-link nk-menu-link" href="index.html">Home</a></li>
+                                <li class="nk-menu-item"><a class="scrollto nav-link nk-menu-link" href="symptoms.html">Symptoms</a></li>
+                                <li class="nk-menu-item"><a class="scrollto nav-link nk-menu-link" href="spread.html">Spread</a></li>
+                                <li class="nk-menu-item"><a class="scrollto nav-link nk-menu-link" href="prevention.html">Prevention</a></li>
+                                <li class="nk-menu-item"><a class="scrollto nav-link nk-menu-link" href="protect.html">Do &amp; Don't</a></li>
+                                <li class="nk-menu-item"><a class="scrollto nav-link nk-menu-link" href="faq.html">FAQ</a></li>
+                                <li class="nk-menu-item"><a class="scrollto nav-link nk-menu-link" href="about.html">About Us</a></li>
+                                <li class="nk-menu-item"><a class="nav-link nk-menu-link nk-menu-toggle">Language</a>
+                                    <ul class="nk-menu-dropdown nk-menu-sub">
+                                        <li class="nk-menu-item"><a class="nav-link nk-menu-link" href="../html_AR/index.html">العربى</a></li>
+                                        <li class="nk-menu-item"><a class="nav-link nk-menu-link" href="../html_FR/index.html">Français</a></li>
+                                        <li class="nk-menu-item"><a class="nav-link nk-menu-link" href="../html/index.html">English</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul class="nk-menu-btns">
+                                <li class="nk-menu-item"><a href="#" data-offcanvas-toggle="sidebar-info" class="btn btn-sm toggle-offcanvas">Help Line</a></li>
+                            </ul>
+                        </nav><!-- .nk-navbar-menu -->
+                    </div><!-- .nk-navbar-wrap -->
+                </div><!-- .container -->
+            </div><!-- .nk-navbar -->
+            <div class="nk-banner-s2">
+                <div class="container">
+                    <div class="row g-gs my-auto align-items-center justify-content-between">
+                        <div class="col-lg-5 order-lg-last">
+                            <div class="nk-banner-s2-image">
+                                <img src="images/gfx/header-b.png" alt="">
+                            </div>
+                        </div><!-- .col -->
+                        <div class="col-lg-7">
+                            <div class="nk-banner-s2-block pr-xl-5">
+                                <div class="content">
+                                    <h6 class="sub-title"><span class="badge badge-danger">Covid-19</span> <span>Coronavirus</span></h6>
+                                    <h1 class="title">Prevent the Spread <br class="d-none d-sm-block"> Stay at Home, Stay Safe</h1>
+                                    <p>The best way to prevent and slow down transmission is to be well informed 
+                                        about the COVID-19 virus. Protect yourself and others from infection by 
+                                        washing your hands at-least 20sec and not touching your face. </p>
+    
+                                    <ul class="nk-banner-btns">
+                                        <li><a href="protect.html" class="btn scrollto"><span>How to Protect</span><em class="icon ni ni-shield-half"></em></a></li>
+                                        <li><a href="index.html" class="btn btn-transparent scrollto"><span>About COVID-19</span><em class="icon ni ni-arrow-right"></em></a></li>
+                                    </ul>
+                                </div><!-- .content -->
+                            </div><!-- .nk-banner-block -->
+                        </div><!-- .col -->
+                    </div><!-- .row -->
+                    <div class="status">
+                        <div class="row g-gs">
+                            <div class="col-lg-6 col-xl-5" data-covid="world" data-covid-update="last-update">
+                                <h6 class="status-title">Worldwide Statistics</h6>
+                                <div class="row g-gs pr-4">
+                                    <div class="col-sm-4 col-6">
+                                        <div class="status-item">
+                                            <div class="h4 count covid-stats-cases" id="world_confirmed"></div>
+                                            <h6 class="title text-purple">Confirmed</h6>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4 col-6">
+                                        <div class="status-item">
+                                            <div class="h4 count covid-stats-death"id="world_deaths"></div>
+                                            <h6 class="title text-danger">Deaths</h6>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4 col-6">
+                                        <div class="status-item">
+                                            <div class="h4 count covid-stats-recovered"id="world_recovered"></div>
+                                            <h6 class="title text-success">Recovered</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- .col -->
+                            <div class="col-lg-6 col-xl-5" data-covid="US">
+                                <h6 class="status-title">In Morocco</h6>
+                                <div class="row g-gs pr-4">
+                                    <div class="col-sm-4 col-6">
+                                        <div class="status-item">
+                                            <div class="h4 count covid-stats-cases" id="morocco_confirmed"></div>
+                                            <h6 class="title text-purple">Confirmed</h6>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4 col-6">
+                                        <div class="status-item">
+                                            <div class="h4 count covid-stats-death" id="morocco_deaths"></div>
+                                            <h6 class="title text-danger">Deaths</h6>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4 col-6">
+                                        <div class="status-item">
+                                            <div class="h4 count covid-stats-recovered" id="morocco_recovered"></div>
+                                            <h6 class="title text-success">Recovered</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- .col -->
+                        </div><!-- .row -->
+                        <div class="status-note">* Last updated: <span id="last-update" class="update-time">~</span></div>
+                    </div><!-- .status -->
+                </div><!-- .container -->
+            </div><!-- .nk-banner -->
+        </header><!-- .nk-header -->
+
+        <main class="nk-pages">
+            <section class="section section-l bg-white section-about" id="about">
+                <div class="container">
+                    <div class="section-content">
+                        <div class="row g-gs justify-content-between align-items-center">
+                            <div class="col-lg-6">
+                                <div class="gfx1 mr-lg-5">
+                                    <img src="images/gfx/gfx-a.png" alt="">
+                                </div>
+                            </div><!-- .col -->
+                            <div class="col-lg-6">
+                                <div class="text-block-s2">
+                                    <h5 class="subtitle">About the disease</h5>
+                                    <h2 class="title">Coronavirus <br class="d-sm-none">(COVID-19)</h2>
+                                    <p class="lead"><strong>COVID-19 is a new illness that can affect your lungs and airways.</strong> It's caused by a virus called coronavirus. It was discovered in December 2019 in Wuhan, Hubei, China. </p>
+                                    <p>Common signs of infection include respiratory symptoms, fever, cough, shortness of breath and breathing difficulties. In more severe cases, infection can cause pneumonia, severe acute respiratory syndrome, kidney failure and even death.</p>
+                                    <p>Standard recommendations to prevent infection spread include regular hand washing, covering mouth and nose when coughing and sneezing, thoroughly cooking meat and eggs. Avoid close contact with anyone showing symptoms of respiratory illness such as coughing and sneezing.</p>
+                                </div><!-- .text-block -->
+                                <div class="fake-box">
+                                    <h4 class="title mb-3">What you need to know</h4>
+                                    <ul class="list row g-s">
+                                        <li class="col-sm-6"><a class="scrollto link" href="spread.html"><span>How coronavirus is spread</span> <em class="icon ni ni-arrow-long-right"></em></a></li>
+                                        <li class="col-sm-6"><a class="scrollto link" href="symptoms.html"><span>Symptoms of coronavirus</span> <em class="icon ni ni-arrow-long-right"></em></a></li>
+                                        <li class="col-sm-6"><a class="scrollto link" href="protect.html"><span>How to Prevent & Protect</span> <em class="icon ni ni-arrow-long-right"></em></a></li>
+                                        <li class="col-sm-6"><a class="scrollto link" href="faq.html"><span>Questions & answers</span> <em class="icon ni ni-arrow-long-right"></em></a></li>
+                                    </ul>
+                                </div><!-- .wgs -->
+                            </div><!-- .col -->
+                        </div><!-- .row -->
+                    </div><!-- .section-content -->
+                </div><!-- .container -->
+            </section><!-- .section -->
+
+        </main><!-- .nk-pages -->
+
+        <footer class="nk-footer bg-dark tc-light has-overlay">
+            <div class="overlay shape shape-c"></div><!-- Overlay Shape -->
+            <section class="section section-footer section-m tc-light">
+                <div class="container">
+                    <div class="nk-footer-top">
+                        <div class="row g-gs gy-m">
+                            <div class="col-lg-3 col-md-9 mr-auto">
+                                <div class="wgs wgs-about">
+                                    <div class="wgs-logo logo">
+                                        <a href="./" class="logo-link">
+                                            <img src="images/logo-white.png" srcset="images/logo-white2x.png 2x" alt="logo">
+                                        </a>
+                                    </div>
+                                    <div class="wgs-about-text">
+                                        <p>This website is for health information and advice about coronavirus (COVID-19), how to prevent and protect yourself from disease.</p>
+                                        <p>Learn about the government response to coronavirus on <a href="https://www.sante.gov.ma/Pages/Accueil.aspx" target="_blank"><strong>www.sante.gov.ma</strong></a></p>
+                                    </div>
+                                    <ul class="wgs-social">
+                                        <li><a href="https://www.facebook.com/pages/Minist%C3%A8re-de-la-Sant%C3%A9-du-Royaume-du-Maroc-Page_Officielle/272656359588722" target="_blank" onclick=""><em class="icon ni ni-facebook-f"></em></a></li>
+                                        <li><a href="https://twitter.com/Ministere_Sante" target="_blank"><em class="icon ni ni-twitter"></em></a></li>
+                                        <li><a href="https://www.youtube.com/channel/UC-2GQbaoDGK_F4S5E6kURiA/featured" target="_blank"><em class="icon ni ni-youtube-fill"></em></a></li>
+                                    </ul>
+                                </div><!-- .wgs -->
+                            </div><!-- .col -->
+                            <div class="col-sm-4 col-lg-2">
+                                <div class="wgs wgs-menu">
+                                    <h6 class="wgs-title">Quick Link</h6>
+                                    <ul class="wgs-links">
+                                        <li><a class="scrollto" href="symptoms.html">Symptoms</a></li>
+                                        <li><a class="scrollto" href="prevention.html">Prevention</a></li>
+                                        <li><a class="scrollto" href="protect.html">Protect Youself</a></li>
+                                        <li><a class="scrollto" href="faq.html">FAQs</a></li>
+                                        <li><a class="scrollto" href="index.html">About Corona</a></li>
+                                    </ul>
+                                </div><!-- .wgs -->
+                            </div><!-- .col -->
+                            <div class="col-sm-4 col-lg-3">
+                                <div class="wgs wgs-menu">
+                                    <h6 class="wgs-title">Helpful links</h6>
+                                    <ul class="wgs-links">
+                                        <li><a href="https://www.sante.gov.ma/Reglementation/Pages/Accueil.aspx">Healthcare Professionals</a></li>
+                                        <li><a href="http://cartesanitaire.sante.gov.ma/dashboard/pages2/etab_geoloc_2019.html">Healthcare Facilities</a></li>
+                                        <li><a href="https://www.sante.gov.ma/Contactez-Nous/Pages/default.aspx">Contact of the Ministry of Health</a></li>
+                                    </ul>
+                                </div><!-- .wgs -->
+                            </div><!-- .col -->
+                            <div class="col-sm-4 col-lg-2">
+                                <div class="wgs wgs-menu">
+                                    <h6 class="wgs-title">Important Links</h6>
+                                    <ul class="wgs-links">
+                                        <li><a href="https://www.sante.gov.ma/Pages/Accueil.aspx">The Ministry of Health Website</a></li>
+                                        <li><a href="https://www.who.int/fr">WHO Website</a></li>
+                                        <li><a href="https://www.cdc.gov/">CDC Website</a></li>
+                                    </ul>
+                                </div><!-- .wgs -->
+                            </div><!-- .col -->
+                            <div class="col-sm-4 col-lg-2">
+                                <div class="wgs wgs-menu">
+                                    <h6 class="wgs-title">Associated Links</h6>
+                                    <ul class="wgs-links">
+                                        <li><a href="https://www.uic.ac.ma/">UIC Website</a></li>
+                                        <li><a href="http://www.univh2c.ma/">UH2C Website</a></li>
+                                    </ul>
+                                </div><!-- .wgs -->
+                            </div><!-- .col -->
+                        </div><!-- .row -->
+                    </div><!-- .nk-footer-top -->
+                    <div class="nk-footer-bottom">
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <p class="nk-copyright">&copy; 2020 Sahti.</p>
+                            </div><!-- .col -->
+                            <div class="col-md-6">
+                                <ul class="nk-footer-links justify-content-md-end">
+                                    <li><a href="https://www.diplomatie.ma/fr/node/1464">Privacy Policy</a></li>
+                                </ul>
+                            </div><!-- .col -->
+                        </div><!-- .row -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="nk-dislaimer">
+                                    <p>We hope you find the information presented on this website useful. This website is for general information and raise awareness of (2019-nCoV) only. <br class="d-none d-lg-block">
+                                        All the information based on WHO, CDC and the Ministry of Health website.  Information on our website is meant for awareness, if you have any doubt please verify from respective site.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- .nk-footer-bottom -->
+                </div><!-- .container -->
+            </section><!-- .section -->
+        </footer><!-- .nk-footer -->
+    </div><!-- .nk-wrap -->
+
+    <div class="nk-offcanvas" id="sidebar-info">
+        <div class="nk-offcanvas-close">
+            <a href="#" data-offcanvas-toggle="sidebar-info" class="toggle-offcanvas"><em class="icon ni ni-cross"></em></a>
+        </div>
+        <div class="nk-offcanvas-inner">
+            <div class="nk-offcanvas-wg-text">
+                <h4 class="title">Helpline for <span>Novel Coronavirus</span></h4>
+                <p>If you seek any help, you may call to know details about coronavirus or in case of any clinical query connect with the respective medical team, <strong>do not panic.</strong> </p>
+            </div>
+            <div class="nk-offcanvas-cta">
+                <h6 class="title text-danger text-center">Emergency Medical Helpline Allô SAMU</h6>
+                <div class="emergency-number">141</div>
+            </div>
+            <div class="nk-offcanvas-table-wrap">
+                <table class="nk-offcanvas-table">
+                    <thead>
+                        <tr>
+                            <th>Hotline / Number</th>
+                            <th>Infomation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>080-1004747</td>
+                            <td>Epidemiological vigilance Number.</td>
+                        </tr>
+                        <tr>
+                            <td>+212 537 76 10 25<br>
+                            +212 537 76 14 03<br>
+                            +212 537 76 36 62
+                            </td>
+                            <td>Ministry of Health Number</td>
+                        </tr>
+                        <tr>
+                            <td>0800000147</td>
+                            <td>Allô Liqah</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="nk-offcanvas-note text-primary">
+                If you have chest pain, shortness of breath, dizziness, a severe headache or any other potentialy life-threatening problems, go to the nearest hostpital or call 141.
+            </div>
+        </div>
+    </div>
+	<!-- JavaScript -->
+	<script src="assets/js/bundle.js?ver=112"></script>
+	<script src="assets/js/scripts.js?ver=112"></script>
+</body>
+</html>

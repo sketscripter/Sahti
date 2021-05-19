@@ -1,0 +1,65 @@
+name: flutter_onboarding_ui
+description: A new Flutter project.
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  webview_flutter_plus: ^0.2.1+1  
+
+  cupertino_icons: ^0.1.2
+  lottie: ^1.0.1
+  shared_preferences: ^2.0.5
+  permission_handler: ^7.0.0
+  url_launcher: ^6.0.3
+ 
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/docs/
+    - assets/docs/images/
+    - assets/html/
+    - assets/html/assets/css/
+    - assets/html/assets/fonts/
+    - assets/html/assets/images/
+    - assets/html/assets/js/
+    - assets/html/images/
+    - assets/html/images/gfx/
+    - assets/html/images/blog/
+    - assets/html_FR/
+    - assets/html_FR/assets/css/
+    - assets/html_FR/assets/fonts/
+    - assets/html_FR/assets/images/
+    - assets/html_FR/assets/js/
+    - assets/html_FR/images/
+    - assets/html_FR/images/gfx/
+    - assets/html_FR/images/blog/
+    - assets/html_AR/
+    - assets/html_AR/assets/css/
+    - assets/html_AR/assets/fonts/
+    - assets/html_AR/assets/images/
+    - assets/html_AR/assets/js/
+    - assets/html_AR/images/
+    - assets/html_AR/images/gfx/
+    - assets/html_AR/images/blog/
+  
+         
+    
+   
+
+  fonts:
+   - family: CM Sans Serif
+     fonts:
+       - asset: assets/fonts/cm_sans_serif_2012.ttf
